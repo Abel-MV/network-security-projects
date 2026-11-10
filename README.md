@@ -6,13 +6,13 @@ These projects focus on understanding network communication, analysing traffic, 
 
 ## Projects
 
-### 1. Network Reconnaissance & Service Enumeration
+### 1. [Network Reconnaissance & Service Enumeration](network-reconnaissance/README.md)
 
 Network discovery and service enumeration using Kali Linux, Ubuntu Server and VMware Workstation Pro.
 
 **Key topics:** Nmap, TCP port states, SSH, HTTP, service detection and UFW firewall rules.
 
-**Status:** Completed — documentation being prepared for publication.
+**Status:** Completed — Published.
 
 ### 2. Network Traffic Analysis
 
