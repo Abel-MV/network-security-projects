@@ -20,11 +20,11 @@ Practical investigation of network traffic and protocol behaviour in a controlle
 
 **Status:** Completed — Published.
 
-### 3. Network Firewall & Traffic Filtering
+### 3. [Network Firewall & Traffic Filtering](network-firewall-filtering/README.md)
 
 Configuration and validation of network filtering rules to understand how firewalls control access to network services.
 
-**Status:** Completed — documentation pending publication.
+**Status:** Completed — Published.
 
 ## Lab Approach
 
