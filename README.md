@@ -14,11 +14,11 @@ Network discovery and service enumeration using Kali Linux, Ubuntu Server and VM
 
 **Status:** Completed — Published.
 
-### 2. Network Traffic Analysis
+### 2. [Network Traffic Analysis](network-traffic-analysis/README.md)
 
 Practical investigation of network traffic and protocol behaviour in a controlled lab environment.
 
-**Status:** Completed — documentation pending publication.
+**Status:** Completed — Published.
 
 ### 3. Network Firewall & Traffic Filtering
 
