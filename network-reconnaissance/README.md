@@ -71,6 +71,10 @@ OpenSSH 9.6p1 Ubuntu 3ubuntu13.20
 
 The detected version was checked against the installed OpenSSH package on Ubuntu Server.
 
+**Evidence — SSH service and version detection:**
+
+![Nmap SSH service enumeration](evidence/network-lab-nmap-ssh-version.png)
+
 ### 3. TCP Port States: Filtered vs Closed
 
 TCP port 8080 was examined before and after temporarily allowing connections through UFW.
@@ -87,6 +91,10 @@ nmap -sT -Pn -p 8080 --reason 192.168.0.237
 8080/tcp filtered http-proxy no-response
 ```
 
+**Evidence — filtered port:**
+
+![Nmap TCP 8080 filtered](evidence/network-lab-nmap-filtered-port.png)
+
 A temporary firewall rule was introduced:
 
 ```bash
@@ -98,6 +106,10 @@ The subsequent scan returned:
 ```text
 8080/tcp closed http-proxy conn-refused
 ```
+
+**Evidence — closed port:**
+
+![Nmap TCP 8080 closed](evidence/network-lab-nmap-closed-port.png)
 
 | Scenario | Port State | Observation |
 |---|---|---|
@@ -154,6 +166,10 @@ nmap -sT -sV -Pn -p 22,80 --reason 192.168.0.237
 
 Both services were accessible from the authorised source IP address.
 
+**Evidence — final SSH and HTTP enumeration:**
+
+![Final service enumeration](evidence/network-lab-final-service-enumeration.png)
+
 ### 6. Firewall Access Control Validation
 
 UFW rules were tested using connections originating from two different network interfaces.
@@ -167,7 +183,11 @@ Firewall logs were inspected using `journalctl`.
 
 Entries containing `UFW BLOCK` confirmed that TCP SYN packets originating from the unauthorised source were blocked for both services.
 
-The validation was limited to the source addresses and services tested.
+**Evidence — UFW blocking HTTP traffic from the unauthorised source:**
+
+![UFW HTTP block validation](evidence/network-lab-ufw-http-block-validation.png)
+
+The validation was limited to the source addresses and services tested. The screenshot above documents HTTP blocking; the SSH blocking result was also verified in firewall logs during the lab.
 
 ## Security Analysis
 
